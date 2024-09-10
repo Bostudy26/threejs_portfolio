@@ -1,12 +1,15 @@
 import { Suspense } from "react"
 
 import { Canvas } from "@react-three/fiber"
-import { PerspectiveCamera } from "@react-three/drei"
+import { PerspectiveCamera} from "@react-three/drei"
 import Loading from "../components/loading"
 import HackerRoom from "../components/HackerRoom"
 import { useMediaQuery } from "react-responsive"
 import { calculateSizes } from "../constants"
 import Target from "../components/Target"
+import ReactLogo from "../components/ReactLogo"
+import Cube from "../components/Cube"
+import Rings from "../components/Rings"
 
 
 const Hero = () => {
@@ -43,7 +46,6 @@ const Hero = () => {
                     position={[0,0,30]}
                 />
                 <HackerRoom
-                    //scale={0.07}
                     position={sizes.deskPosition}
                     rotation={[0,-Math.PI,0]}
                     scale={sizes.deskScale}
@@ -52,6 +54,15 @@ const Hero = () => {
                     <group>
                         <Target
                             position={sizes.targetPosition}
+                        />
+                        <ReactLogo
+                            position={sizes.reactLogoPosition}
+                        />
+                        <Cube
+                            position={sizes.cubePosition}
+                        />
+                        <Rings 
+                            position={sizes.ringPosition}
                         />
                     </group>
                 
