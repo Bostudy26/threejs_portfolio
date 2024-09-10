@@ -5,6 +5,7 @@ Command: npx gltfjsx@6.5.0 hacker-room-new.glb -T
 
 import { useGLTF, useTexture } from '@react-three/drei';
 
+
 const HackerRoom = (props) => {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
