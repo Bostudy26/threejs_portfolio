@@ -3,10 +3,16 @@ import { navLinks } from "../constants";
 
     const NavItems = () => {
     return (
-        <ul>
-            {navLinks.map((item) => (
-                <li key={item.id}>
-                    {item.name}
+        <ul className="nav-ul">
+            {navLinks.map(({id, name, href}) => (
+                <li key={id} className="nav-li">
+                    <a 
+                        href={href}
+                        className="nav-li_a"
+                        onClick={() => {}}              
+                    >
+                        {name}
+                    </a>
                 </li>
             ))}
         </ul>
@@ -45,6 +51,9 @@ import { navLinks } from "../constants";
                         <NavItems />
                     </nav>
                 </div>
+            </div>
+            <div className="">
+
             </div>
         </header>
     )
